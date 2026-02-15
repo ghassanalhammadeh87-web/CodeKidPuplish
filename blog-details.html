@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icons/icon.png">
+    <title>CodeKids|blog-details</title>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+      function lorem(num){
+              j=0;
+              for(i=0;i<num;i++){
+                if(j==50){document.writeln('<br>');j=0; }
+                else{document.write('مرحبا'+' ');j++;}
+                
+              }
+            }
+    </script>
+</head>
+<body>
+
+
+    <!-- navbar -->
+
+  <nav class="bg-white border-gray-200 dark:bg-gray-900 drop-shadow-sm fixed w-[100%] z-50">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="assets/icons/icon.png" class="h-8 " width="30px" alt="CodeKids Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white mr-3">CodeKids</span>
+    </a>
+    <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+        <button type="button" data-dropdown-toggle="language-dropdown-menu" class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+          <svg class="w-5 h-5 rounded-full me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900"><path fill="#b22234" d="M0 0h7410v3900H0z"/><path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff" stroke-width="300"/><path fill="#3c3b6e" d="M0 0h2964v2100H0z"/><g fill="#fff"><g id="d"><g id="c"><g id="e"><g id="b"><path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"/><use xlink:href="#a" y="420"/><use xlink:href="#a" y="840"/><use xlink:href="#a" y="1260"/></g><use xlink:href="#a" y="1680"/></g><use xlink:href="#b" x="247" y="210"/></g><use xlink:href="#c" x="494"/></g><use xlink:href="#d" x="988"/><use xlink:href="#c" x="1976"/><use xlink:href="#e" x="2470"/></g></svg>
+          English (US)
+        </button>
+        <!-- Dropdown -->
+        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700" id="language-dropdown-menu">
+          <ul class="py-2 font-medium" role="none">
+            <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                <div class="inline-flex items-center">
+                  <svg aria-hidden="true" class="h-3.5 w-3.5 rounded-full me-2" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-us" viewBox="0 0 512 512"><g fill-rule="evenodd"><g stroke-width="1pt"><path fill="#bd3d44" d="M0 0h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/><path fill="#fff" d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z" transform="scale(3.9385)"/></g><path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)"/><path fill="#fff" d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z" transform="scale(3.9385)"/></g></svg>              
+                  English (US)
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                <div class="inline-flex items-center">
+                  <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-de" viewBox="0 0 512 512"><path fill="#ffce00" d="M0 341.3h512V512H0z"/><path d="M0 0h512v170.7H0z"/><path fill="#d00" d="M0 170.7h512v170.6H0z"/></svg>
+                  Deutsch
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                <div class="inline-flex items-center">
+                  <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" id="flag-icon-css-it" viewBox="0 0 512 512"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#fff" d="M0 0h512v512H0z"/><path fill="#009246" d="M0 0h170.7v512H0z"/><path fill="#ce2b37" d="M341.3 0H512v512H341.3z"/></g></svg>              
+                  Italiano
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                <div class="inline-flex items-center">
+                  <svg class="h-3.5 w-3.5 rounded-full me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="flag-icon-css-cn" viewBox="0 0 512 512"><defs><path id="a" fill="#ffde00" d="M1-.3L-.7.8 0-1 .6.8-1-.3z"/></defs><path fill="#de2910" d="M0 0h512v512H0z"/><use width="30" height="20" transform="matrix(76.8 0 0 76.8 128 128)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-121 142.6 -47) scale(25.5827)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-98.1 198 -82) scale(25.6)" xlink:href="#a"/><use width="30" height="20" transform="rotate(-74 272.4 -114) scale(25.6137)" xlink:href="#a"/><use width="30" height="20" transform="matrix(16 -19.968 19.968 16 256 230.4)" xlink:href="#a"/></svg>
+                  中文 (繁體)
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button data-collapse-toggle="navbar-language" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-language" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
+      <ul class="flex flex-col md:items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="index.html" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" >الرئيسية</a>
+        </li>
+        <li>
+          <a href="#AboutUs" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">عنا</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">المنشورات</a>
+        </li>
+        <li>
+          <a href="#categories" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">الكورسات</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">أتصل بنا</a>
+        </li>
+        <li>
+          <!-- darkmode button -->
+          <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700  dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+        </li>
+        
+      </ul>
+    </div>
+    </div>
+  </nav>
+  
+    <!--E navbar -->
+
+
+    <!-- S blog page header section -->
+    <section class="hero-blog bg-gray-200 dark:bg-gray-800 pt-[80px]">
+      <!-- <h1 class="headline text-center text-blue-900 text-5xl leading-10 m-5">blog-details</h1> -->
+      <div class="max-w-screen-xl mx-auto flex  justify-between items-center py-[30px] px-3">
+
+        <div class="grow flex flex-col items-center">
+          <h1 class="text-center md:text-start text-3xl font-bold text-blue-500 mb-5">منشور عن تقنية الـ wifi</h1>
+          <p class="text-center md:text-start text-black dark:text-gray-300 font-bold mb-3">الكاتب: <span>مارشال برين وتالون هومر</span></p>
+          <div class="flex justify-center md:justify-start gap-3 text-black dark:text-gray-300 mb-4">
+              
+                <div>
+                  <i class="fa-regular fa-square-check text-blue-500"></i>
+                  25 منشور
+                </div>
+                <div>
+                  <i class="fa-solid fa-file-lines text-blue-500"></i>
+                  شبكات 
+                </div>
+                <div>
+                  <i class="fa-solid fa-globe text-blue-500"></i>
+                  ٢٦ فبراير ٢٠٢٤
+                </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+    <!-- S blog page header section -->
+    <!--S content -->
+    <section class="main-content dark:bg-gray-900" id="section-id">
+      <div class="inner-content max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between gap-2 px-3">
+        <div class="content grow">
+          <div class="text-sm  font-medium text-center text-body border-b border-default">
+            
+            <ul class="c-tabs flex flex-wrap -mb-px" data-tabs-toggle="#tab-content" id="ul-tabs">
+                <li class="me-2 ">
+                    <a href="#tab1" data-tabs-target="#tab1" role="tab" aria-controls="#tab1" aria-selected="true"  class="text-black dark:text-white inline-block p-4 border-b border-transparent rounded-t-base hover:text-fg-brand hover:border-brand active">تفاصيل المنشور</a>
+                </li>
+                <li class="me-2">
+                    <a href="#tab2" data-tabs-target="#tab2" role="tab" aria-controls="#tab1" aria-selected="false" class="text-black dark:text-white inline-block p-4 text-fg-brand border-b border-brand rounded-t-base " aria-current="page">المحتويات</a>
+                </li>
+                <li class="me-2">
+                    <a href="#tab3" data-tabs-target="#tab3" role="tab" aria-controls="#tab1" aria-selected="false" class="text-black dark:text-white inline-block p-4 border-b border-transparent rounded-t-base hover:text-fg-brand hover:border-brand">حول الكاتب</a>
+                </li>
+                
+            </ul>
+          </div>
+          <div id="tab-content px-5">
+            <div id="tab1" class="my-5">
+              <h1 class=" text-3xl bg-gray-100 rounded-md  block p-2 mb-5">ما هو الواي فاي وكيف يعمل؟
+              </h1>
+              <span class="text-black dark:text-gray-300">
+                بقلم: مارشال برين وتالون هومر  |  تاريخ التحديث: ٢٦ فبراير ٢٠٢٤
+
+              </span>
+              <hr class="border-blue-500 border-4 my-5" >
+              <img class=" w-full object-cover mt-0" src="assets/images/blogs/wifi-blog-main.png" alt="">
+              
+              <p class="mt-5 text-xl leading-7 dark:text-gray-200">
+                في الماضي، لم تكن شبكة الواي فاي متوفرة إلا في بعض المطارات أو المقاهي أو الفنادق. أما اليوم، فقد أصبح الاتصال اللاسلكي بالإنترنت، المعروف أيضًا باسم واي فاي أو شبكات 802.11، متوفرًا في كل منزل وشركة تقريبًا. كما تستخدم العديد من المدن هذه التقنية لتوفير خدمة إنترنت مجانية أو منخفضة التكلفة لسكانها.
+
+              </p>
+              <p class="mt-5 text-xl leading-7  dark:text-gray-200">
+                للواي فاي مزايا عديدة. فالشبكات اللاسلكية سهلة الإعداد وغير مكلفة. كما أنها غير مزعجة - إلا إذا كنت تبحث عن مكان لمشاهدة الأفلام عبر الإنترنت على جهازك اللوحي، فقد لا تلاحظ وجودك في نقطة اتصال. في هذه المقالة، سنتناول التقنية التي تسمح بنقل المعلومات لاسلكيًا. وسنستعرض أيضًا ما يلزم لإنشاء شبكة لاسلكية في منزلك.
+
+              </p>
+              <!-- <div class="flex justify-center">
+                <img class="mt-5 rounded-xl w-[500px] h-[200px] object-cover" src="assets/images/blogs/scratch lessons.jpeg" alt="">
+              </div> -->
+              <p class="mt-5 text-xl leading-7  dark:text-gray-200">
+                أولاً، دعونا نلقي نظرة على بعض أساسيات WiFi.
+
+              </p>
+              <div class="grid grid-cols-1 gap-5 bg-gray-100 rounded-[10px] p-3 mt-5">
+                <div>
+                  <ul class="flex flex-col gap-1">
+                    <!-- <li>
+                      <span class="text-xl">على مدى الأسابيع الأربعة المقبلة، سوف تقوم بما يلي:</span>
+                    </li> -->
+                    <li>
+                      <i class="fa-regular fa-square-check text-blue-500"></i>
+                      <span>
+                        <a href="#">
+                           ما هو الواي فاي؟    
+                        </a>
+                      </span>
+                    </li>
+                    <li>
+                      <i class="fa-regular fa-square-check text-blue-500"></i>
+                      <span>
+                        <a href="#">نقاط اتصال واي فاي</a>
+                      </span>
+                    </li>
+
+                    <li>
+                      <i class="fa-regular fa-square-check text-blue-500"></i>
+                      <span>
+                        <a href="#">بناء شبكة لاسلكية</a> 
+                      </span>
+                    </li>
+                    
+                    
+                  </ul>
+                </div>
+                
+            </div>
+            <p class="mt-5 text-xl leading-7  dark:text-gray-200">
+              التفاصيل كاملة في <a class="text-blue-500" href="#ul-tabs">محتويات</a> المنشور
+            </p>
+             
+            </div>
+            <div id="tab2" class="my-5 dark:text-gray-200">
+              <p class="text-3xl mb-3">
+                محتويات المنشور الكاملة:
+              </p>
+              <div id="accordion-collapse" data-accordion="collapse" class="text-black dark:text-gray-200">
+                <h2 id="accordion-collapse-heading-1">
+                  <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 dark:text-white border border-b-0 border-gray-200 rounded-t-xl  dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                    <span>
+                      ما هو الواي فاي؟
+                    </span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="accordion-collapse-body-1" class="hidden my-3" aria-labelledby="accordion-collapse-heading-1">
+                  <div class="flex flex-col justify-between px-2">
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">
+                      تستخدم الشبكة اللاسلكية موجات الراديو ، تمامًا كما تفعل الهواتف المحمولة وأجهزة التلفزيون والراديو. في الواقع، يُشبه الاتصال عبر شبكة لاسلكية إلى حد كبير الاتصال اللاسلكي ثنائي الاتجاه. إليك ما يحدث:
+                    </p>
+                    <ol class="mb-5 flex gap-5">
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+                        يقوم المحول اللاسلكي للكمبيوتر بترجمة البيانات إلى إشارة راديو وإرسالها باستخدام هوائي.
+
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+                        يستقبل جهاز التوجيه اللاسلكي الإشارة ويفك تشفيرها. ثم يرسل المعلومات إلى الإنترنت عبر اتصال إيثرنت سلكي فعلي.
+
+                      </li>
+                    </ol>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">
+                      وتعمل هذه العملية أيضًا في الاتجاه المعاكس، حيث يستقبل جهاز التوجيه المعلومات من الإنترنت، ويترجمها إلى إشارة راديو، ثم يرسلها إلى المحول اللاسلكي الخاص بالكمبيوتر.
+
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">تُشبه أجهزة الراديو المُستخدمة في اتصالات الواي فاي إلى حد كبير أجهزة الراديو المُستخدمة في أجهزة اللاسلكي والهواتف المحمولة وغيرها من الأجهزة. فهي قادرة على إرسال واستقبال موجات الراديو، وتحويل الأصفار والواحدات إلى موجات راديو، ثم تحويلها مرة أخرى إلى الأصفار والواحدات. إلا أن أجهزة الراديو المُستخدمة في الواي فاي تتميز ببعض الاختلافات الملحوظة عن غيرها من الأجهزة:
+
+                    </p>
+                    <ol class="mb-5 flex flex-col gap-3 decoration-amber-800">
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        تُبثّ هذه الأجهزة بترددات 2.4 جيجاهرتز أو 5 جيجاهرتز. هذا التردد أعلى بكثير من الترددات المستخدمة في الهواتف المحمولة وأجهزة اللاسلكي والتلفزيونات. يسمح هذا التردد الأعلى للإشارة بحمل بيانات أكثر.
+
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        تُعتبر اتصالات 2.4 جيجاهرتز الآن قديمة بعض الشيء نظرًا لسرعاتها المنخفضة في نقل البيانات مقارنةً بـ 5 جيجاهرتز. مع ذلك، لا يزال نطاق 2.4 قيد الاستخدام، إذ يُمكن لهذا التردد المنخفض نقل البيانات لمسافة تصل إلى مئات الأقدام . في الظروف المثالية، يبلغ أقصى مدى لنطاق 5 جيجاهرتز حوالي 200 قدم (61 مترًا)، ولكنه في الواقع أكثر عرضة للتداخل من الجدران والأبواب والأشياء الأخرى. قد يكون نطاق 2.4 أسرع لمستخدم متصل بجهاز توجيه على بُعد عدة غرف، بينما سيكون نطاق 5 جيجاهرتز أسرع بالتأكيد للاتصالات القريبة.
+                      </li>
+                    </ol>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">تستخدم تقنية WiFi معايير الشبكات 802.11، والتي تأتي بأشكال مختلفة وتطورت على مر العقود:
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">يُعد معيار 802.11b (الذي طُرح عام 1999) أبطأ معيار وأقلها تكلفة. لفترة من الوقت، ساهمت تكلفته في انتشاره، ولكنه الآن أقل شيوعًا مع انخفاض تكلفة المعايير الأسرع. يُرسل معيار 802.11b في نطاق التردد 2.4 جيجاهرتز من الطيف الراديوي. يمكنه معالجة ما يصل إلى 11 ميجابت في الثانية، ويستخدم تعديل التشفير التكميلي (CCK) لتحسين السرعات.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">يُرسِل معيار 802.11a (الذي طُرِحَ بعد 802.11b) بتردد 5 جيجاهرتز، ويُمكِنه نقل ما يصل إلى 54 ميجابت من البيانات في الثانية. ويستخدم تقنية الإرسال المتعدد بتقسيم التردد المتعامد (OFDM)، وهي تقنية ترميز أكثر كفاءة تُقسِّم إشارة الراديو إلى عدة إشارات فرعية قبل وصولها إلى جهاز الاستقبال. وهذا يُقلِّل التداخل بشكل كبير.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">ينقل 802.11g البيانات بسرعة 2.4 جيجاهرتز مثل 802.11b، ولكنه أسرع كثيرًا - يمكنه التعامل مع ما يصل إلى 54 ميجابت من البيانات في الثانية. 802.11g أسرع لأنه يستخدم نفس ترميز OFDM مثل 802.11a.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">معيار 802.11n (الذي طُرح عام 2009) متوافق مع الإصدارات السابقة من بروتوكولات a وb وg. وقد حسّن السرعة والمدى بشكل ملحوظ مقارنةً بسابقاته. على سبيل المثال، على الرغم من أن معيار 802.11g ينقل نظريًا 54 ميجابت من البيانات في الثانية، إلا أنه لا يحقق سرعات فعلية تتجاوز 24 ميجابت في الثانية بسبب ازدحام الشبكة. مع ذلك، يُقال إن معيار 802.11n يمكنه تحقيق سرعات تصل إلى 140 ميجابت في الثانية. يستطيع معيار 802.11n نقل ما يصل إلى أربعة تدفقات بيانات، بحد أقصى 150 ميجابت في الثانية لكل منها، لكن معظم أجهزة التوجيه لا تسمح إلا بتدفقين أو ثلاثة تدفقات.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">ظهر 802.11ac على الساحة حوالي عام 2014، ويعمل حصريًا بتردد 5 جيجاهرتز. 802.11ac متوافق مع الإصدارات السابقة من 802.11n (وبالتالي مع الإصدارات الأخرى أيضًا)، مع n على نطاق 2.4 جيجاهرتز وac على نطاق 5 جيجاهرتز. إنه أقل عرضة للتداخل وأسرع بكثير من سابقاته، حيث يدفع بحد أقصى 450 ميجابت في الثانية على تيار واحد، على الرغم من أن السرعات في العالم الحقيقي قد تكون أقل. ومثل 802.11n، فإنه يسمح بالإرسال على تيارات مكانية متعددة - ما يصل إلى ثمانية، اختياريًا. يُطلق عليه أحيانًا اسم 5G بسبب نطاق تردده، وأحيانًا Gigabit WiFi بسبب قدرته على تجاوز جيجابت في الثانية على تيارات متعددة وأحيانًا أخرى Very High Throughput (VHT) لنفس السبب.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">ظهر معيار 802.11ax ، المعروف أيضًا باسم WiFi 6، في قطاع الاتصالات عام 2019. يُوسّع هذا المعيار إمكانيات معيار 802.11ac بعدة طرق رئيسية. أولًا، تتيح أجهزة التوجيه الجديدة معدل تدفق بيانات أعلى، يصل إلى 9.2 جيجابت في الثانية. كما يُتيح WiFi 6 للمُصنّعين تركيب عدد أكبر من الهوائيات على جهاز توجيه واحد، ما يسمح بقبول اتصالات متعددة في آنٍ واحد دون أي قلق من التداخل أو تباطؤ الأداء. تتصل بعض الأجهزة الجديدة أيضًا بنطاق 6 جيجاهرتز أعلى، وهو أسرع بنحو 20% من 5 جيجاهرتز في الظروف المثالية.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">بدأت تقنية 802.11be (أو WiFi 7 ) في الظهور في عام 2024، حيث تقدم نطاقًا أفضل ومزيدًا من الاتصالات ومعدلات بيانات أسرع من أي من الإصدارات السابقة.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">تركز معايير 802.11 الأخرى على تطبيقات محددة للشبكات اللاسلكية، مثل شبكات المنطقة الواسعة (WAN) داخل المركبات أو التكنولوجيا التي تتيح لك الانتقال من شبكة لاسلكية إلى أخرى بسلاسة.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">يمكن لأجهزة راديو الواي فاي البث على أي نطاق ترددي، أو يمكنها التنقل بسرعة بين النطاقات المختلفة. يساعد التنقل الترددي على تقليل التداخل، ويتيح لأجهزة متعددة استخدام نفس الاتصال اللاسلكي في آنٍ واحد.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">طالما أن جميع الأجهزة مزودة بمحولات لاسلكية، يمكن لعدة أجهزة استخدام جهاز توجيه واحد للاتصال بالإنترنت. هذا الاتصال سهل الاستخدام، وغير مرئي تقريبًا، وموثوق به إلى حد ما؛ ومع ذلك، في حال تعطل جهاز التوجيه أو محاولة عدد كبير من المستخدمين استخدام تطبيقات عالية النطاق الترددي في الوقت نفسه، فقد يواجه المستخدمون تداخلًا أو انقطاعًا في الاتصال، مع أن المعايير الأحدث والأسرع مثل 802.11ax ستساعد في ذلك.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">بعد ذلك، سننظر في كيفية الاتصال بالإنترنت من نقطة اتصال WiFi.
+
+                    </p>
+                    <div class="bg-gray-300 p-2">
+                      <h3 class="text-3xl text-black">أسماء أخرى ومعايير أخرى للشبكات اللاسلكية
+                      </h3>
+                      <p class="text-xl text-black leading-7 w-full md:w-[90%] mb-5">من المفاهيم الخاطئة الشائعة أن "واي فاي" اختصار لـ "دقة الاتصال اللاسلكي"، لكن المصطلح في الواقع مستوحى من معايير الشبكات 802.11. يُطلق معهد مهندسي الكهرباء والإلكترونيات (IEEE) على هذا المعيار . يضع هذا المعهد معايير لمجموعة من البروتوكولات التكنولوجية، ويستخدم نظام ترقيم لتصنيف هذه المعايير.
+
+                      </p>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+      
+                <h2 id="accordion-collapse-heading-2">
+                  <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200  dark:border-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                    <span>
+                      نقاط اتصال واي فاي
+
+
+                    </span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="accordion-collapse-body-2" class="hidden my-3" aria-labelledby="accordion-collapse-heading-2">
+                  <div class="flex flex-col justify-between px-2">
+                    <img class="mb-5" src="assets/images/blogs/wifi-blog-1.avif" alt="">
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">نقطة اتصال واي فاي هي ببساطة منطقة مزودة بشبكة لاسلكية متاحة. يُستخدم هذا المصطلح غالبًا للإشارة إلى الشبكات اللاسلكية في الأماكن العامة كالمطارات والمقاهي. بعضها مجاني وبعضها الآخر يتطلب رسومًا، ولكنها في كلتا الحالتين مفيدة أثناء التنقل. يمكنك حتى إنشاء نقطة اتصال واي فاي خاصة بك باستخدام هاتف محمول أو جهاز خارجي متصل بشبكة خلوية. ويمكنك أيضًا إعداد شبكة واي فاي في منزلك عبر مزودي خدمة الإنترنت.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">إذا كنت ترغب في الاستفادة من شبكات واي فاي العامة أو شبكتك المنزلية، فإن أول ما عليك فعله هو التأكد من أن جهاز الكمبيوتر لديك مزود بالمعدات المناسبة. تأتي معظم أجهزة الكمبيوتر المحمولة الجديدة ، والعديد من أجهزة الكمبيوتر المكتبية الجديدة، مزودة بأجهزة إرسال لاسلكية مدمجة، وجميع الأجهزة المحمولة تقريبًا تدعم تقنية واي فاي. إذا لم يكن جهاز الكمبيوتر لديك مزودًا بها بالفعل، يمكنك شراء محول لاسلكي يُوصل بمنفذ بطاقة الشبكة أو منفذ USB . يمكن لأجهزة الكمبيوتر المكتبية استخدام محولات USB، أو شراء محول يُوصل بمنفذ PCI داخل هيكل الجهاز. يمكن للعديد من هذه المحولات استخدام أكثر من معيار 802.11.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">بمجرد تثبيت محول لاسلكي وبرامج التشغيل التي تسمح بتشغيله، سيتمكن جهاز الكمبيوتر الخاص بك من اكتشاف الشبكات الموجودة تلقائيًا. هذا يعني أنه عند تشغيل جهاز الكمبيوتر في نقطة اتصال واي فاي، سيُعلمك الجهاز بوجود الشبكة ويسألك عما إذا كنت ترغب في الاتصال بها. إذا كان لديك جهاز كمبيوتر قديم، فقد تحتاج إلى استخدام برنامج لاكتشاف الشبكات اللاسلكية والاتصال بها.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">يُعدّ الحصول على اتصال واي فاي في الأماكن العامة أمرًا مريحًا للغاية. كما تُعدّ الشبكات المنزلية اللاسلكية مريحة أيضًا، إذ تُتيح لك توصيل عدة أجهزة كمبيوتر وأجهزة لاسلكية أخرى بسهولة، ونقلها من مكان لآخر دون الحاجة إلى فصل الأسلاك وإعادة توصيلها. في القسم التالي، سنتناول كيفية إنشاء شبكة لاسلكية في منزلك.
+
+                    </p>
+                  </div>
+                 
+                </div>
+      
+                <h2 id="accordion-collapse-heading-3">
+                  <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200  dark:border-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 gap-3" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                    <span>
+                      بناء شبكة لاسلكية
+
+
+                    </span>
+                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                    </svg>
+                  </button>
+                </h2>
+                <div id="accordion-collapse-body-3" class="hidden my-3" aria-labelledby="accordion-collapse-heading-3">
+                  <div class="flex flex-col justify-between px-2">
+                    <img class="mb-5" src="assets/images/blogs/wifi-blog-2.avif" alt="">
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">
+                      إذا كان لديك بالفعل عدة أجهزة كمبيوتر متصلة بشبكة في منزلك، يمكنك إنشاء شبكة لاسلكية باستخدام نقطة وصول لاسلكية. أما إذا كان لديك عدة أجهزة كمبيوتر غير متصلة بشبكة، أو إذا كنت ترغب في استبدال شبكة إيثرنت ، فستحتاج إلى جهاز توجيه لاسلكي. وهو جهاز واحد يحتوي على:
+
+
+                    </p>
+                    <ol class="mb-5 flex flex-col gap-3">
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        منفذ للاتصال بكابل أو مودم DSL
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        جهاز التوجيه ، المعروف أيضًا باسم شبكة المنطقة المحلية اللاسلكية (WLAN)
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        مركز إيثرنت
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+                        جدار الحماية
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+                        نقطة وصول لاسلكية
+                      </li>
+                      
+                    </ol>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">يتيح لك جهاز التوجيه اللاسلكي استخدام الإشارات اللاسلكية أو كابلات الإيثرنت لتوصيل أجهزة الكمبيوتر والأجهزة المحمولة ببعضها البعض، وبالطابعات ، وبالإنترنت . توفر معظم أجهزة التوجيه تغطية لمسافة 30.5 مترًا تقريبًا في جميع الاتجاهات، مع أن الجدران والأبواب قد تحجب الإشارة. إذا كان منزلك كبيرًا جدًا، يمكنك شراء موسعات أو مكررات نطاق رخيصة لزيادة نطاق جهاز التوجيه.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">كما هو الحال مع محولات الشبكة اللاسلكية، يمكن للعديد من أجهزة التوجيه استخدام أكثر من معيار 802.11. عادةً، تكون أجهزة توجيه 802.11n أقل تكلفةً بقليل من غيرها، ولكن نظرًا لقدم المعيار، فهي أبطأ أيضًا من 802.11ac أو 802.11ax.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">بمجرد توصيل جهاز التوجيه، سيبدأ العمل بإعداداته الافتراضية. تتيح لك معظم أجهزة التوجيه استخدام واجهة ويب لتغيير إعداداتك. يمكنك اختيار:
+
+                    </p>
+                    <ol class="mb-5 flex flex-col gap-3">
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+                        اسم الشبكة، المعروف باسم مُعرِّف مجموعة خدماتها (SSID). الإعداد الافتراضي هو عادةً اسم الشركة المُصنِّعة.
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        القناة التي يستخدمها جهاز التوجيه. تستخدم معظم أجهزة التوجيه القناة 6 افتراضيًا. إذا كنت تعيش في شقة وجيرانك يستخدمون القناة 6 أيضًا، فقد تواجه تداخلًا. يُفترض أن يُحل التغيير إلى قناة أخرى المشكلة.
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        خيارات أمان جهاز التوجيه الخاص بك. تستخدم العديد من أجهزة التوجيه تسجيل دخول قياسيًا متاحًا للعامة، لذا يُنصح بتعيين اسم مستخدم وكلمة مرور خاصين بك.
+                      </li>
+                    </ol>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">يُعدّ الأمان جزءًا أساسيًا من شبكة الواي فاي المنزلية، وكذلك نقاط اتصال الواي فاي العامة. إذا ضبطتَ جهاز التوجيه الخاص بك لإنشاء نقطة اتصال مفتوحة، فسيتمكن أي شخص لديه بطاقة لاسلكية من استخدام إشارتك. مع ذلك، يُفضّل معظم الناس إبعاد الغرباء عن شبكتهم. يتطلب ذلك اتخاذ بعض الاحتياطات الأمنية.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">من المهم أيضًا التأكد من تحديث احتياطات الأمان لديك. كان معيار أمان الخصوصية المكافئة للشبكات السلكية (WEP) هو المعيار القياسي لأمان شبكات WAN.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">كانت الفكرة وراء بروتوكول WEP إنشاء منصة أمان لاسلكية تجعل أي شبكة لاسلكية آمنة تمامًا كالشبكات السلكية التقليدية. لكن المتسللين اكتشفوا ثغرات في نهج WEP، واليوم أصبح من السهل العثور على تطبيقات وبرامج قد تُعرّض شبكات WAN التي تعمل ببروتوكول WEP للخطر. وقد تلا ذلك الإصدار الأول من بروتوكول WiFi Protected Access (WPA)، الذي يستخدم تشفير بروتوكول سلامة المفتاح الزمني (TKIP)، وهو نسخة مطورة من WEP، ولكنه لم يعد يُعتبر آمنًا .
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">للحفاظ على خصوصية شبكتك، يمكنك استخدام طريقة واحدة أو أكثر من الطرق التالية:
+
+                    </p>
+                    <ol class="mb-5 flex flex-col gap-3">
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        الوصول المحمي بالواي فاي الإصدار 2 (WPA2) هو خليفة WEP وWPA، وهو الآن معيار الأمان المُوصى به لشبكات الواي فاي. يستخدم إما تشفير TKIP أو معيار التشفير المتقدم (AES)، حسب اختيارك عند الإعداد. يُعتبر AES الأكثر أمانًا. وكما هو الحال مع WEP وWPA الأصلي، يتضمن أمان WPA2 تسجيل الدخول بكلمة مرور. نقاط الاتصال العامة إما مفتوحة أو تستخدم أيًا من بروتوكولات الأمان المتاحة، بما في ذلك WEP، لذا توخَّ الحذر عند الاتصال خارج المنزل. يبدو أن إعداد الواي فاي المحمي (WPS)، وهي ميزة تربط رقم تعريف شخصي (PIN) ثابتًا بجهاز التوجيه وتُسهّل عملية الإعداد، تُنشئ ثغرة أمنية يُمكن للمخترقين استغلالها، لذا يُنصح بإيقاف تشغيل WPS إن أمكن، أو البحث عن أجهزة توجيه لا تحتوي على هذه الميزة.
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        أُطلق بروتوكول WPA3 عام ٢٠١٨ وأصبح معيار الأمان اعتبارًا من عام ٢٠٢٠. ويهدف إلى حلّ بعض ثغرات WPA2 من خلال تطبيق تشفير أكثر تعقيدًا على كلٍّ من جهاز التوجيه وجهاز العميل. ويتغير هذا التشفير بمرور الوقت، مما يعني أنه إذا تمكن أحد المخترقين من الوصول إلى اتصال غير مصرح به في وقت ما، فسيتم حظره مرة أخرى في المرة التالية التي يحاول فيها الاتصال. كما يمكن للأجهزة المزوّدة ببروتوكول WPA3 إضافة بعض التشفير من جانب العميل أثناء استخدام الشبكات العامة المفتوحة.
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        تجدر الإشارة إلى أنه مهما بلغت درجة أمان الشبكة اللاسلكية، فمن المؤكد أنها ستحتوي على طرق استغلال يمكن للمخترقين استخدامها. عندما يتعلق الأمر ببيانات حكومية أو مؤسسية حساسة، يُعد الاتصال السلكي البسيط الخيار الأكثر أمانًا. للوصول إلى شبكة لاسلكية أو التجسس عليها، يجب أن يكون المخترق ضمن نطاق جهاز التوجيه، لذا من غير المرجح حدوث هجمات في المنزل.
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-square-check text-blue-500"></i>
+
+                        تختلف تصفية عناوين التحكم في وصول الوسائط (MAC) قليلاً عن بروتوكولات WEP أو WPA أو WPA2. فهي لا تستخدم كلمة مرور للتحقق من هوية المستخدمين، بل تستخدم مكونات جهاز الكمبيوتر. لكل جهاز كمبيوتر عنوان MAC فريد خاص به. تسمح تصفية عناوين MAC فقط للأجهزة التي تحمل عناوين MAC محددة بالوصول إلى الشبكة. يجب عليك تحديد العناوين المسموح بها عند إعداد جهاز التوجيه. إذا اشتريت جهاز كمبيوتر جديدًا أو أراد زوار منزلك استخدام شبكتك، فستحتاج إلى إضافة عناوين MAC للأجهزة الجديدة إلى قائمة العناوين المعتمدة. هذا النظام ليس مضمونًا تمامًا. يمكن للمخترق الذكي انتحال عنوان MAC، أي نسخ عنوان MAC معروف لخداع الشبكة بأن جهاز الكمبيوتر الذي يستخدمه ينتمي إليها.
+                      </li>
+                    </ol>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">يمكنك أيضًا تغيير إعدادات أخرى لجهاز التوجيه لتحسين الأمان. على سبيل المثال، يمكنك ضبطه لحظر طلبات شبكة WAN لمنع جهاز التوجيه من الاستجابة لطلبات IP من المستخدمين البعيدين، وتحديد حد أقصى لعدد الأجهزة التي يمكنها الاتصال بجهاز التوجيه، بل وتعطيل الإدارة عن بُعد بحيث لا تتمكن سوى أجهزة الكمبيوتر المتصلة مباشرةً بجهاز التوجيه من تغيير إعدادات الشبكة.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">يجب عليك أيضًا تغيير مُعرِّف مجموعة الخدمة (SSID)، وهو اسم شبكتك، إلى مُعرِّف آخر غير الافتراضي، حتى لا يتمكن المُتطفلون من معرفة جهاز التوجيه الذي تستخدمه فورًا. ولا ضير في اختيار كلمة مرور قوية.
+
+                    </p>
+                    <p class="text-xl leading-7 w-full md:w-[90%] mb-5">الشبكات اللاسلكية سهلة الإعداد وغير مكلفة، وواجهات الويب لمعظم أجهزة التوجيه واضحة جدًا. لمزيد من المعلومات حول إعداد واستخدام شبكة لاسلكية، يُرجى الاطلاع على الروابط التالية.
+
+                    </p>
+                    <ol class="mb-5 flex flex-col gap-3">
+                      <li><a href="#">link 1</a></li>
+                      <li><a href="#">link 2</a></li>
+                      <li><a href="#">link 3</a></li>
+                      <li><a href="#">link 4</a></li>
+                    </ol>
+                  </div>
+          
+                </div>
+               
+      
+              </div>
+            </div>
+            <div id="tab3" class="mt-5">
+              <h2 class="text-xl text-blue-500">غسان الحمادة</h2>
+              <div class="flex items-center gap-3 my-3">
+                <img class=" w-[100px] h-[100px] rounded-full object-cover" src="assets/images/categories/servers.jpg" alt="">
+                <span class="dark:text-gray-200">
+                  <i class="fa-regular fa-square-check text-blue-500"></i>
+                  250 متابع
+                </span>
+                <span class="dark:text-gray-200">
+                  <i class="fa-regular fa-square-check text-blue-500"></i>
+                  25 منشور 
+                </span>
+              </div>
+              <p class="dark:text-gray-200">مصمم مواقع الويب</p>
+              <div class="social flex gap-5 my-5">
+                <a href="#"><i class="fa-brands fa-facebook text-2xl  text-blue-500"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp text-2xl  text-green-500"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter text-2xl dark:text-white"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in text-2xl text-blue-600"></i></a>
+                
+              </div>
+            </div>
+            <div class="reviews bg-gray-200 rounded-t-md p-5">
+              <h2 class="text-3xl text-yellow-500 font-bold mb-3">التعليقات</h2>
+              <div class="flex items-center justify-start gap-3 mb-3">
+                <div>
+                  <h3 class="text-xl text-blue-500">205 تعليق</h3>
+                </div>
+                <div class="text-yellow-500 flex items-center gap-3">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                
+              </div>
+              <div class="progressbar">
+               <div class=" flex items-center gap-3">
+                <span>5</span>
+                <div class=" w-full md:w-[85%] bg-neutral-quaternary rounded-full bg-white">
+                  <div class="bg-blue-700 text-xs font-medium text-black text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center" style="width: 45%"> 45%</div>
+                </div>
+               </div>
+               <div class=" flex items-center gap-3">
+                <span>4</span>
+                <div class="w-full md:w-[85%] bg-neutral-quaternary rounded-full bg-white">
+                  <div class="bg-blue-700 text-xs font-medium text-black text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center" style="width: 20%"> 20%</div>
+                </div>
+               </div>
+               <div class=" flex items-center gap-3">
+                <span>3</span>
+                <div class="w-full md:w-[85%] bg-neutral-quaternary rounded-full bg-white">
+                  <div class="bg-blue-700 text-xs font-medium text-black text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center" style="width: 17%"> 17%</div>
+                </div>
+               </div>
+               <div class=" flex items-center gap-3">
+                <span>2</span>
+                <div class="w-full md:w-[85%] bg-neutral-quaternary rounded-full bg-white">
+                  <div class="bg-blue-700 text-xs font-medium text-black text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center" style="width: 13%"> 13%</div>
+                </div>
+               </div>
+               <div class=" flex items-center gap-3">
+                <span>1</span>
+                <div class="w-full md:w-[85%] bg-neutral-quaternary rounded-full bg-white">
+                  <div class="bg-blue-700 text-xs font-medium text-black text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center" style="width: 5%"> 5%</div>
+                </div>
+               </div>
+               
+   
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+
+        <div class="blog-details w-full h-full pb-5 rounded-[10px] my-[5px] md:w-[25%] shrink-0 bg-gray-200 md:sticky top-[70px]">
+         <div class=" widget p-3 mb-5">
+          <h2 class="text-2xl font-blod text-gray-700">كافة التصنيفات</h2>
+          <hr class="w-[70%] border-gray-300 border-1 mb-5" >
+          <div class="flex flex-col gap-1">
+            <a href="#"><h3 class="text-xl text-gray-500 hover:text-gray-600 px-3">برمجة</h3></a>
+            <a href="#"><h3 class="text-xl text-gray-500 hover:text-gray-600 px-3">شبكات</h3></a>
+            <a href="#"><h3 class="text-xl text-gray-500 hover:text-gray-600 px-3">ذكاء صنعي</h3></a>
+            <a href="#"><h3 class="text-xl text-gray-500 hover:text-gray-600 px-3">أساسيات الحاسوب</h3></a>
+            <a href="#"><h3 class="text-xl text-gray-500 hover:text-gray-600 px-3">أساسيات الشبكات</h3></a>
+            <a href="#"><h3 class="text-xl text-gray-500 hover:text-gray-600 px-3">أساسيات الخوارزميات</h3></a>
+            <a href="#"><h3 class="text-xl text-gray-500 hover:text-gray-600 px-3">متنوع</h3></a>
+          </div>
+          
+          
+         </div>
+         <div class="top-news p-3">
+          <h2 class="text-2xl font-blod text-gray-700">آخر الأخبار</h2>
+          <hr class="w-[70%] border-gray-300 border-1 mb-3" >
+          <div class="news flex justify-between items-center bg-gray-100 rounded-md p-2 mb-2">
+            <div>
+              <h3 class="text-2xl font-blod text-gray-700">تعلم الكتابة الصحيحة</h3>
+              <i class="fa-solid fa-file-lines text-blue-500"></i>
+              ٢٦ فبراير ٢٠٢٤
+            </div>
+            <img class="w-[100px] h-[100px] object-cover rounded-sm shadow-xl" src="assets/images/blogs/color typing.jpeg" alt="color typing.jpeg">
+          </div>
+          <div class="news flex justify-between items-center bg-gray-100 rounded-md p-2 mb-2">
+            <div>
+              <h3 class="text-2xl font-blod text-gray-700">تاريخ الذكاء الصنعي</h3>
+              <i class="fa-solid fa-file-lines text-blue-500"></i>
+              ٢٦ نوفمبر ٢٠٢٤
+            </div>
+            <img class="w-[100px] h-[100px] object-cover rounded-sm shadow-xl" src="assets/images/blogs/2.webp" alt="color typing.jpeg">
+          </div>
+          <div class="news flex justify-between items-center bg-gray-100 rounded-md p-2 mb-2">
+            <div>
+              <h3 class="text-2xl font-blod text-gray-700">الشبكة العنكبوتية وأعطالها</h3>
+              <i class="fa-solid fa-file-lines text-blue-500"></i>
+              ٢٦ ديسمبر ٢٠٢٤
+            </div>
+            <img class="w-[100px] h-[100px] object-cover rounded-sm shadow-xl" src="assets/images/blogs/3.jpg" alt="color typing.jpeg">
+          </div>
+
+         </div>
+          
+        </div>
+
+      </div>
+      <!-- related blogs -->
+      <section class="related-blogs py-7 bg-gray-300 dark:bg-gray-600">
+        <h2 class="text-start text-4xl text-blue-500 font-bold mb-4 pr-12">المنشورات المتعلقة</h2>
+        <!-- <p class="text-center text-xl w-[70%] mx-auto mb-5 dark:text-white">منشوراتنا ومنشورات المساهمين يقدمون معلومات تفيدك في اتمام المعلومات التي تقوم بدراستها </p> -->
+        <div class="swiper max-w-screen-xl mx-auto p-3">
+          <div class="blog swiper-wrapper   transition-all ease-in-out duration-400">
+  
+            <div class="mimi-blog swiper-slide relative bg-slate-900 dark:bg-slate-200 rounded-md overflow-hidden  hover:-translate-y-2">
+           <div class="absolute bg-red-500 dark:bg-blue-500 px-2 py-1 rounded-md" style="top:5px;right:10px;">حاسوب</div>  
+           <div class="course-image w-full h-[250px]">
+               <img class="w-full h-full object-cover" src="assets/images/blogs/Components of a Computer - TEKnical Services.jpeg" alt="course1 image">
+             </div>
+             <div class="course-info p-2">
+               <h3 class="text-xl text-center font-bold text-gray-200  dark:text-black mb-3">أساسيات الحاسوب</h3>
+               <p class="text-center text-white  dark:text-black">
+                 منشور عن المكونات الرئيسية للحاسوب
+               </p>
+             </div>
+             <div class="auther flex items-center gap-[10px] p-2">
+               <div class="w-[50px] h-[50px] rounded-full">
+                <img class="rounded-full" src="assets/images/New folder/happy-cute-kids-use-laptops-for-learning-free-vector-removebg-preview.png" alt="auther-img">
+               </div>
+              <div class="flex flex-col gap-[5px]">
+                 <span class="text-white dark:text-black">محمد المحمود</span>
+                 <span class="text-white text-[12px]  dark:text-black">May.22.2025</span>
+               </div>
+  
+             
+             </div>
+             <div class="flex item center">
+               <a href="blog1.html"  class="w-full block text-center  text-white bg-red-500 dark:bg-blue-500 hover:brightness-75 rounded-full m-2 p-1">أقرأ المزيد</a>
+             </div>
+   
+            </div>
+            <div class="mimi-blog swiper-slide relative bg-slate-900 dark:bg-slate-200 rounded-md overflow-hidden hover:-translate-y-2">
+           <div class="absolute bg-red-500 dark:bg-blue-500 px-2 py-1 rounded-md" style="top:5px;right:10px;">منوع</div>  
+           <div class="course-image w-full h-[250px]">
+               <img class="w-full h-full object-cover" src="assets/images/blogs/How to Hold the Mouse.jpeg" alt="course1 image">
+             </div>
+             <div class="course-info p-2">
+               <h3 class="text-xl text-center font-bold text-gray-200  dark:text-black mb-3"> الطريقة الصحية لإستحدام الفأرة  </h3>
+               <p class="text-center text-white  dark:text-black">
+                 <!-- <script>lorem(20)</script> -->
+                 منشور عن الطريقة الصحية لإستحدام الفأرة
+               </p>
+             </div>
+             <div class="auther flex items-center gap-[10px] p-2">
+               <div class="w-[50px] h-[50px] rounded-full">
+                <img class="rounded-full" src="assets/images/New folder/font-design-for-word-code-kids-with-girl-wearing-vr-mask-removebg-preview.png" alt="auther-img">
+               </div>
+              <div class="flex flex-col gap-[5px]">
+                 <span class="text-white dark:text-black">روان الحلو</span>
+                 <span class="text-white text-[12px]  dark:text-black">May.22.2025</span>
+               </div>
+  
+             
+             </div>
+             <div class="flex item center">
+               <a href="blog1.html"  class="w-full block text-center  text-white bg-red-500 dark:bg-blue-500 hover:brightness-75 rounded-full m-2 p-1">أقرأ المزيد</a>
+             </div>
+   
+            </div>
+            <div class="mimi-blog swiper-slide relative bg-slate-900 dark:bg-slate-200 rounded-md overflow-hidden hover:-translate-y-2">
+           <div class="absolute bg-red-500 dark:bg-blue-500 px-2 py-1 rounded-md" style="top:5px;right:10px;">حاسوب</div>  
+           <div class="course-image w-full h-[250px]">
+               <img class="w-full h-full object-cover" src="assets/images/blogs/color typing.jpeg" alt="color typing.jpg">
+             </div>
+             <div class="course-info p-2">
+               <h3 class="text-xl text-center font-bold text-gray-200  dark:text-black mb-3"> الكتابة على لوحة المفاتيح</h3>
+               <p class="text-center text-white  dark:text-black">
+                 <!-- <script>lorem(20)</script> -->
+                 منشور عن الطريقة الأمثل للكتابة على لوحة المفاتيح  
+               </p>
+             </div>
+             <div class="auther flex items-center gap-[10px] p-2">
+               <div class="w-[50px] h-[50px] rounded-full">
+                <img class="rounded-full" src="assets/images/New folder/happy-cute-kids-use-laptops-for-learning-free-vector-removebg-preview.png" alt="auther-img">
+               </div>
+              <div class="">
+                 <span class="text-white dark:text-black">منال الريس</span>
+                 <span class="text-white text-[12px]  dark:text-black">May.22.2025</span>
+               </div>
+  
+             
+             </div>
+             <div class="flex item center">
+               <a href="blog1.html"  class="w-full block text-center  text-white bg-red-500 dark:bg-blue-500 hover:brightness-75 rounded-full m-2 p-1">أقرأ المزيد</a>
+             </div>
+   
+            </div>
+            <div class="mimi-blog swiper-slide relative bg-slate-900 dark:bg-slate-200 rounded-md overflow-hidden hover:-translate-y-2">
+           <div class="absolute bg-red-500 dark:bg-blue-500 px-2 py-1 rounded-md" style="top:5px;right:10px;">شبكات</div>  
+              <div class="course-image w-full h-[250px]">
+               <img class="w-full h-full object-cover" src="assets/images/blogs/Wi-Fi.jpeg" alt="course1 image">
+              </div>
+              <div class="course-info p-2">
+               <h3 class="text-xl text-center font-bold text-gray-200  dark:text-black mb-3 ">ماهو ال wifi </h3>
+               <p class="text-center text-white  dark:text-black">
+                 <!-- <script>lorem(20)</script> -->
+                 منشور عن مفهوم شبكات الواي فاي  
+               </p>
+              </div>
+              <div class="auther flex items-center gap-[10px] p-2">
+                <div class="w-[50px] h-[50px] rounded-full">
+                <img class="rounded-full" src="assets/images/New folder/font-design-for-word-code-kids-with-girl-wearing-vr-mask-removebg-preview.png" alt="auther-img">
+                </div>
+                <div class="flex flex-col gap-[5px]">
+                 <span class="text-white dark:text-black">روان الحلو</span>
+                 <span class="text-white text-[12px]  dark:text-black">May.22.2025</span>
+                </div>
+
+              </div>
+             <div class="flex item center">
+               <a href="blog-details.html"  class="w-full block text-center  text-white bg-red-500 dark:bg-blue-500 hover:brightness-75 rounded-full m-2 p-1">أقرأ المزيد</a>
+             </div>
+   
+            </div> 
+            <div class="mimi-blog swiper-slide relative bg-slate-900 dark:bg-slate-200 rounded-md overflow-hidden hover:-translate-y-2">
+           <div class="absolute bg-red-500 dark:bg-blue-500 px-2 py-1 rounded-md" style="top:5px;right:10px;">حاسوب</div>  
+           <div class="course-image w-full h-[250px]">
+               <img class="w-full h-full object-cover" src="assets/images/blogs/Types+of+Ports.jpg" alt="Types+of+Ports.jpg">
+             </div>
+             <div class="course-info p-2">
+               <h3 class="text-xl text-center font-bold text-gray-200  dark:text-black mb-3 "> منشور عن أنواع المقابس في الحاسوب </h3>
+               <p class="text-center text-white  dark:text-black">
+                 <!-- <script>lorem(20)</script> -->
+                 منشور أنواع المقابس في الحاسوب وأستخداماتها   
+               </p>
+             </div>
+             <div class="auther flex items-center gap-[10px] p-2">
+               <div class="w-[50px] h-[50px] rounded-full">
+                <img class="rounded-full" src="assets/images/New folder/font-design-for-word-code-kids-with-girl-wearing-vr-mask-removebg-preview.png" alt="auther-img">
+               </div>
+              <div class="flex flex-col gap-[5px]">
+                 <span class="text-white dark:text-black">روان النن</span>
+                 <span class="text-white text-[12px]  dark:text-black">May.22.2025</span>
+               </div>
+  
+             
+             </div>
+             <div class="flex item center">
+               <a href="blog-details.html"  class="w-full block text-center  text-white bg-red-500 dark:bg-blue-500 hover:brightness-75 rounded-full m-2 p-1">أقرأ المزيد</a>
+             </div>
+   
+            </div> 
+         </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    
+        </div>
+      </section>
+      <!-- related blogs -->
+    </section>
+    <!--E content -->
+
+
+    <!--Start footer section -->
+    <footer class="bg-gray-900 pt-7 border border-t-1 border-t-blue-400">
+      
+      
+      <!-- <div class="overlayw-full h-full" style="background-color: black;"></div> -->
+      <div class="blog max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 justify-between  gap-5 p-3">
+  
+      <div class="f1 flex flex-col gap-2">
+        <h3 class="text-2xl text-blue-500">كود كيدز</h3>
+        <p class="text-white text-xl w-[80%] leading-10">
+          نحن منظمة غير ربحية متخصصة بتعليم الأطفال البرمجة والذكاء الصنعي بطريقة مفيدة وممتعة وأسس أستخدام الحاسوب والتقنيات الذكية
+        </p>
+      </div>
+      <div class="f2 flex flex-col gap-2 transition-all ease-in-out">
+        
+        <ul class="flex flex-col gap-2 transition-all ease-in-out ">
+          <li><h3 class="text-2xl text-blue-500">أهم الروابط</h3></li>
+          <li><a class="text-white text-xl" href="#">الرئيسية</a ></li>
+          <li><a class="text-white text-xl" href="#">عنا      </a ></li>
+          <li><a class="text-white text-xl" href="#"> المدونة </a ></li>
+          <li><a class="text-white text-xl" href="#"> الكورسات</a ></li>
+          <li><a class="text-white text-xl" href="#"> اتصل بنا</a ></li>
+        </ul>
+      </div>
+      <div class="f3 flex flex-col gap-2 transition-all ease-in-out">
+        <ul class="flex flex-col gap-2 transition-all ease-in-out ">
+          <li><h3 class="text-2xl text-blue-500">أهم الكورسات</h3></li>
+          <li><a class="text-white text-xl " href="#">كورس تعلم البرمجة ب سكراتش</a ></li>
+          <li><a class="text-white text-xl " href="#">ويب</a ></li>
+          <li><a class="text-white text-xl" href="#">الخوارزميات المبسطة</a ></li>
+          <li><a class="text-white text-xl" href="#">علوم الحاسوب</a ></li>
+          <li><a class="text-white text-xl" href="#">الذكاء الصنعي</a ></li>
+        </ul>
+      </div>
+      <div class="f3 flex flex-col gap-2">
+        <h3 class="text-2xl text-blue-500">
+          النشرة البريدية
+        </h3>
+        <div>
+          <form action="" class="flex gap-1">
+            <input  class=" grow px-2 caret-blue-900 border border-blue-500  rounded-[8px] bg-gray-900 placeholder:text-gray-200" type="text" placeholder="أدخل البريد الإلكتروني">
+            <button class="btn  rounded-full shrink-0">أشترك الآن</button>
+          </form>
+        </div>
+        
+      </div>
+      
+        
+    </div>
+    <div class="copyright grow border  border-gray-400 text-center mt-3">
+      <span class="text-gray-200">جميع الحقوق محفوظة أكاديمية كلاود سوفت</span>
+      <span class="text-blue-600">&copy</span>
+    </div>   
+    </footer>
+    <!-- End footer section -->
+    <!-- scripts -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
